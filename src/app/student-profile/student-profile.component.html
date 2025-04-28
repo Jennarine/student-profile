@@ -1,0 +1,34 @@
+<div class="student-profile">
+    <h1>{{ studentName }}</h1>
+    <p>Age: {{ studentAge }}</p>
+    <p>Age in 5 years: {{ studentAge + 5 }}</p>
+  
+    <img [src]="profileImageUrl" alt="Student Profile">
+  
+    
+  
+<div class="button-group">
+  <button type="button" (click)="disableButton()">Disable</button>
+  <button type="button" (click)="enableButton()">Enable</button>
+</div>
+
+
+<button type="button" [disabled]="isButtonDisabled">
+  {{ isButtonDisabled ? 'Disabled' : 'Enabled' }}
+</button>
+
+    <table border="1">
+      <tr>
+        <td>Name</td>
+        <td [attr.colspan]="colspanValue">Details</td>
+      </tr>
+      <tr>
+        <td>Age</td>
+        <td>Information</td>
+      </tr>
+    </table>
+  
+    <div [attr.aria-label]="'Student profile section'">
+      Accessible Student Info
+    </div>
+  </div>

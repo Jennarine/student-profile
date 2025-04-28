@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-sample';
+    
+  description = 'Today class';
+  isVisible = false;
+
+    userId = '001003467';
 }
+

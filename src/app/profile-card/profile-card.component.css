@@ -1,0 +1,21 @@
+.card button {
+  margin: 5px 5px 0 0;
+  padding: 8px 12px;
+  background-color: lightseagreen;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.card button:hover {
+  background-color: seagreen;
+  color: white;
+}
+
+.button-group {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}

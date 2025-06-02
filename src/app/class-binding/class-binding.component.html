@@ -1,0 +1,11 @@
+<button [class.danger]="isError" (click)="toggleClass()">Submit
+
+</button>
+<p [class.danger]="isError">Change styling</p>
+
+
+<button (click)="onButtonClick()">Click me</button>
+<p>You have clicked {{ count }} times.</p>
+
+<input type="text" (input)="onNameInput($event)" placeholder="Enter your name">
+<p>Hello, {{ name }}!</p>

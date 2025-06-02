@@ -1,0 +1,53 @@
+<div
+  class="card"
+  [ngStyle]="{
+    'background-color': cardBgColor,
+    'font-style': fontStyle
+  }"
+  style="padding: 20px; border-radius: 10px; width: 300px; margin: auto;"
+>
+  <img
+    [src]="profileImageUrl"
+    [style.width.px]="150"
+    [style.height.px]="150"
+    [style.marginBottom.px]="10"
+    [style.border]="profileImageBorder"
+    alt="Profile image"
+    style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover;"
+  />
+
+  <h2>{{ profileName }}</h2>
+
+  <input
+    type="text"
+    [(ngModel)]="profileName"
+    placeholder="Edit name"
+    style="width: 100%; margin-bottom: 10px;"
+  />
+
+  <input
+    type="number"
+    [(ngModel)]="bioFontSize"
+    placeholder="Bio font size"
+    style="width: 100%; margin-bottom: 10px;"
+  />
+
+  <input
+    type="file"
+    (change)="handleImageUpload($event)"
+    style="margin-bottom: 10px;"
+  />
+
+  <p
+    *ngIf="showBio"
+    [style.fontSize.px]="bioFontSize"
+    style="margin-top: 10px;"
+  >
+    {{ bio }}
+  </p>
+
+  <div class="button-group">
+    <button (click)="toggleBioVisibility()"> Check Bio</button>
+    <button (click)="toggleBackground()"> Background Color</button>
+  </div>
+</div>

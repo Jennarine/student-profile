@@ -19,4 +19,6 @@ export class StudentProfileComponent {
   enableButton() {
     this.isButtonDisabled = false;
   }
+
+  username = ""
 }
